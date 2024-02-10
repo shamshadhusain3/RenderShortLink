@@ -37,8 +37,8 @@ res.render('short',{shortLink,shortLinkH,request})
             visitedHistory:[]
     
         })
-        const shortLink=`http://localhost:3000/url/${shortId}`
-        const shortLinkH=`http://localhost:3000/url/analytics/${shortId}`
+       const shortLink=`https://shortlinksapp.onrender.com/url/${shortId}`
+    const shortLinkH=`https://shortlinksapp.onrender.com/url/analytics/${shortId}`
     
     res.render('short',{shortLink,shortLinkH,request})
 
