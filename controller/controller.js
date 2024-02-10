@@ -22,8 +22,8 @@ class urlrouter{
         visitedHistory:[]
 
     })
-    const shortLink=`https:/urlshortlinkapp.onrender.com/url/${shortId}`
-    const shortLinkH=`https:/urlshortlinkapp.onrender.com/url/analytics/${shortId}`
+    const shortLink=`/url/${shortId}`
+    const shortLinkH=`/url/analytics/${shortId}`
 
 res.render('short',{shortLink,shortLinkH,request})
    }else{
@@ -37,8 +37,8 @@ res.render('short',{shortLink,shortLinkH,request})
             visitedHistory:[]
     
         })
-       const shortLink=`https:/urlshortlinkapp.onrender.com/url/${shortId}`
-    const shortLinkH=`https:/urlshortlinkapp.onrender.com/url/analytics/${shortId}`
+       const shortLink=`/url/${shortId}`
+    const shortLinkH=`/url/analytics/${shortId}`
     
     res.render('short',{shortLink,shortLinkH,request})
 
