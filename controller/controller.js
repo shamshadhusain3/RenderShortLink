@@ -25,7 +25,7 @@ class urlrouter{
     const shortLink=`/url/${shortId}`
     const shortLinkH=`/url/analytics/${shortId}`
 
-res.render('short',{shortLink,shortLinkH,request})
+res.render('short',{shortLink,shortLinkH,request,shortId})
    }else{
         
         // res.send({"status":"failed", "message":'Please enter a valid URL with http or https.',"url":`https://${req.body.url}`}); 
