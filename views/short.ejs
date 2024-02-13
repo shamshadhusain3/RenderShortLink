@@ -20,20 +20,25 @@
             text-decoration: none;
             padding: 10px 15px;
             margin-top: 1rem;
+            width: 400px;
             background-color: white;
             font-size: 1.5rem;
           color: rgb(48, 123, 176);
             border-radius: 20px;
+            text-align: center;
            
         }
-        h1{font-size: 3rem;}
-       .history{
+        h1{font-size: 3rem;
+        text-align: center;}
+        .history{
             margin-top: 1rem;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            justify-content: center;
+            align-items: center;
         }
- button{
+        button{
             background-color: aquamarine;
             padding: 10px 15px;
             margin-top: 15px;
@@ -49,6 +54,18 @@
             transform: rotate(360deg) scale(.9);
             background-color: rgb(77, 207, 164);
             
+        }
+        @media only screen and (max-width: 480px) {
+
+            h1{
+                font-size: 2rem;
+                /* background-color: blueviolet; */
+            }
+            a{
+                font-size: 1rem;
+                width: 250px;
+                overflow: auto;
+            }
         }
 
     </style>
