@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,8 +27,28 @@
            
         }
         h1{font-size: 3rem;}
-        .history{
-            margin-top: 2rem;
+       .history{
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+ button{
+            background-color: aquamarine;
+            padding: 10px 15px;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight:700 ;
+            transition: all 1s  ease ;
+
+        }
+        button:hover{
+            transform: rotate(360deg) scale(.9);
+            background-color: rgb(77, 207, 164);
+            
         }
 
     </style>
@@ -36,11 +56,29 @@
 <body>
     <h1>Short Link Generated</h1>
 
-    <a href="<%= shortLink %>" target="_blank"> https:/urlshortlinkapp.onrender.com/<%= shortId %></a>
+    <a href="<%= shortLink %>" target="_blank"> https://urlshortlinkapp.onrender.com/url/<%= shortId %></a>
+    <button   onclick="cpytxt()">copy Url</button>
+
     <div class="history">
         <a href="<%= shortLinkH %>">View History</a>
         <a href="/url">back To Home Page</a>
 
     </div>
+ <script >
+       // copy  function 
+
+function cpytxt() {
+  // Get the text field
+  var copyText = document.getElementById("cpy").innerText;
+
+  navigator.clipboard.writeText(copyText).then(()=>console.log('copied')).catch((err)=>console.log());
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText);
+}
+
+
+
+    </script>
 </body>
 </html>
