@@ -88,11 +88,26 @@ function cpytxt() {
   // Get the text field
   var copyText = document.getElementById("cpy").innerText;
 
-  navigator.clipboard.writeText(copyText).then(()=>console.log('copied')).catch((err)=>console.log());
-
-  // Alert the copied text
-  alert("Copied the text: " + copyText);
+  // Check if the Clipboard API is supported
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    // Use the Clipboard API to copy text
+    navigator.clipboard.writeText(copyText)
+      .then(() => {
+        console.log('Text copied to clipboard:', copyText);
+        alert("Copied the text: " + copyText);
+      })
+      .catch((err) => {
+        console.error('Unable to copy text:', err);
+        // Fallback to prompt user to manually copy
+        prompt('Copy the text below:', copyText);
+      });
+  } else {
+    // Fallback for browsers that do not support the Clipboard API
+    console.log('Clipboard API not supported, fallback to prompt.');
+    prompt('Copy the text below:', copyText);
+  }
 }
+
 
 
 
