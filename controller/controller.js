@@ -40,7 +40,7 @@ res.render('short',{shortLink,shortLinkH,request,shortId})
        const shortLink=`/url/${shortId}`
     const shortLinkH=`/url/analytics/${shortId}`
     
-    res.render('short',{shortLink,shortLinkH,request})
+    res.render('short',{shortLink,shortLinkH,request,shortId})
 
    }
   
